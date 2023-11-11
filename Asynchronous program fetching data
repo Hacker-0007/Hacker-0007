@@ -1,0 +1,20 @@
+
+```javascript
+// Make an asynchronous HTTP request to fetch data from my site
+fetch('https://api.hariomcodes.com/data')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json(); // Parse the JSON data from the response
+  })
+  .then(data => {
+    // Use the fetched data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors that occurred during the fetch
+    console.error('Fetch error:', error);
+  });
+```
+
